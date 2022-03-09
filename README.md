@@ -1,3 +1,3 @@
 # Edvora
 
-Deploy [#Edvora](https://soccer-statistic.vercel.app/)
+Deploy [#Edvora](https://edvora-kappa-sepia.vercel.app/)
