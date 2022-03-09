@@ -1,0 +1,10 @@
+@import '../sass/main';
+
+.Container {
+  @include block-format(_, 100%, 100%, 0 auto);
+  max-width: $xl;
+
+  @media (max-width: $md) {
+    padding: 0 1rem;
+  }
+}

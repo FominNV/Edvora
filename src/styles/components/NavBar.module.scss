@@ -1,0 +1,39 @@
+@import '../sass/main';
+
+.NavBar {
+  @include block-format(_, 100%, 60px, 0, 0, $black-gray);
+
+  &__content {
+    @include block-format(_, 100%, 100%);
+    @include flex(space-between);
+  }
+
+  &__links {
+    @include block-format(_, _, 100%);
+    @include flex(space-between, flex-end);
+
+    &_link {
+      margin-right: 25px;
+      padding: 4px 0;
+      @include text-format(1.125rem, 400, $intern, $gray-light);
+      line-height: 1.2;
+      text-decoration: none;
+      border-bottom: 2px solid $trans;
+
+      &.active {
+        color: $white;
+        font-weight: 700;
+        border-bottom-color: $white;
+      }
+
+      @media (max-width: $md) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__filter {
+    @include block-format(_, _, 100%, 0, 0 0 4px);
+    @include flex(_, flex-end);
+  }
+}

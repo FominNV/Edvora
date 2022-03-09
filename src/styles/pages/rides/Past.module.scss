@@ -1,0 +1,6 @@
+@import '../../sass/main';
+
+.Past {
+  @include block-format(_, 100%, 100%, 0, 0, $black-gray);
+  min-height: calc(100vh - 60px - 84px);
+}

@@ -1,0 +1,41 @@
+@import '../../sass/main';
+
+.RideCard {
+  @include block-format(
+    relative,
+    100%,
+    198px,
+    0 0 13px,
+    22px 25px 28px,
+    $black-lighter
+  );
+  border-radius: 10px;
+  @include flex();
+
+  @media (max-width: $md) {
+    height: auto;
+    @include flex(_, center, column);
+  }
+
+  &__map {
+    @include block-format(_, 296px, 153px);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__info {
+    @include block-format(_, auto, 100%, 0 0 0 44px);
+    @include flex(space-between, _, column);
+
+    @media (max-width: $md) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__names {
+    @include block-format(absolute, auto, 23px);
+    top: 22px;
+    right: 25px;
+    @include flex();
+  }
+}

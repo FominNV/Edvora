@@ -1,0 +1,5 @@
+@import '../../sass/main';
+
+.RideList {
+  @include block-format(_, 100%, auto, 0, 24px 0);
+}

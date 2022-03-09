@@ -1,0 +1,12 @@
+@import '../../sass/main';
+
+.NameItem {
+  @include block-format(_, auto, 23px, 0 0 0 24px, 4px 10px, $black-darker);
+  border-radius: 1rem;
+  @include text-format(0.75rem, 500, $intern, $white);
+  line-height: 1.2;
+
+  @media (max-width: $sm) {
+    margin-left: 10px;
+  }
+}

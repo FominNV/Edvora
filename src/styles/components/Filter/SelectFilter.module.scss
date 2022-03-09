@@ -1,0 +1,52 @@
+@import '../../sass/main';
+
+.SelectFilter {
+  @include block-format(relative, 100%, 37.5px, 0, 0, $black-low-gray);
+  @include flex();
+
+  &::after {
+    content: url('../../../content/icons/select-arrow.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    padding: 10px 6px 0 0;
+    background: $black-low-gray;
+    box-sizing: border-box;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  // &:hover::after {
+  //   fill: $white;
+  // }
+
+  &__arrow {
+    @include block-format(absolute, 12px, 12px, 0, 0);
+    top: calc(50% - 6px);
+    right: 12.5px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__select {
+    @include inp-reset;
+    appearance: none;
+    @include block-format(
+      relative,
+      100%,
+      100%,
+      0,
+      8px 30px 7.5px 12px,
+      $black-low-gray
+    );
+    @include text-format(17px, 400, $sfProd, $white, left);
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 3;
+    cursor: pointer;
+  }
+}

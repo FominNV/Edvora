@@ -1,0 +1,16 @@
+@import '../../sass/main';
+
+.InfoItem {
+  @include block-format(_, auto, 25px);
+  @include flex(flex-start, center);
+  @include text-format(1.125rem, 500, $intern, $gray);
+  line-height: 1.2;
+
+  @media (max-width: $sm) {
+    font-size: 1rem;
+  }
+
+  &__value {
+    color: $white;
+  }
+}
